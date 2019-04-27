@@ -1,4 +1,4 @@
-package cn.devmgr.javathreads.executor;
+package cn.devmgr.javathreads.section5;
 
 import java.util.Timer;
 import java.util.TimerTask;
