@@ -10,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class TimerAndTimerTask {
 
     public static void main(String[] argvs) throws Exception {
-        usegTimer();
+        // 对比 ScheduledExecutorService 和 Timer
+        useTimer();
         System.out.println("\r\n-----------\r\n");
         usePool();
     }
@@ -54,7 +55,7 @@ public class TimerAndTimerTask {
         service.shutdownNow();
 
     }
-    public static void usegTimer() throws Exception{
+    public static void useTimer() throws Exception{
         Timer timer = new Timer("Timer", true);
         System.out.println("Thread.activeCount() = " + Thread.activeCount());
         printThreads();

@@ -1,4 +1,4 @@
-package cn.devmgr.javathreads;
+package cn.devmgr.javathreads.section8;
 
 import java.util.HashMap;
 import java.util.Map;

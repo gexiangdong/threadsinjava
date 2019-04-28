@@ -31,7 +31,7 @@ public class FixedThreadPoolTest {
         service.shutdown(); // 禁止service再接收新任务的submit
         try {
             // service中还有正在运行的任务，等一段时间，让他们执行完毕
-            if (!service.awaitTermination(60, TimeUnit.SECONDS)) {
+            if (!service.awaitTermination(70, TimeUnit.SECONDS)) {
                 service.shutdownNow(); // shutdownNow会给正在运行的线程发送Interrupt中断；要求所有线程退出
                 // 等待一段时间以便线程处理中断退出
                 if (!service.awaitTermination(30, TimeUnit.SECONDS)) {

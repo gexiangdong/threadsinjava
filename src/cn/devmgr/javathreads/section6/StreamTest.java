@@ -1,4 +1,4 @@
-package cn.devmgr.javathreads.stream;
+package cn.devmgr.javathreads.section6;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package cn.devmgr.javathreads;
+package cn.devmgr.javathreads.section7;
 
 import java.util.concurrent.Semaphore;
 
