@@ -26,10 +26,12 @@ public class LambdaSample {
         list.add(4);
         list.add(8);
         list.forEach(System.out::println);
-    }
 
+    }
 
     public static interface MyFunction{
         int cal(int x, int y);
     }
+
+
 }
