@@ -1,7 +1,9 @@
 package cn.devmgr.javathreads.section8;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class LambdaSample {
 
@@ -31,6 +33,14 @@ public class LambdaSample {
 
     public static interface MyFunction{
         int cal(int x, int y);
+
+        default int add(int x, int y){
+            return x + y;
+        }
+
+        static int multiple(int x, int y){
+            return x * y;
+        }
     }
 
 
