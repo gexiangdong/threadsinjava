@@ -13,15 +13,16 @@ public class SampleConnectionPool {
 
     public Connection getOne() throws InterruptedException {
         available.acquire();
-        synchronized (this) {
-            for (int i = 0; i < MAX; ++i) {
-                if (!used[i]) {
-                    used[i] = true;
-                    if(items[i] == null){
-                       // items[i] = new ...
-                    }
-                    return items[i];
+        return createOne();
+    }
+    private synchronized Connection createOne(){
+        for (int i = 0; i < MAX; ++i) {
+            if (!used[i]) {
+                used[i] = true;
+                if(items[i] == null){
+                   // items[i] = new ...
                 }
+                return items[i];
             }
         }
         return null;
