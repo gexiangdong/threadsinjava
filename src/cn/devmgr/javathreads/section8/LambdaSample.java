@@ -29,6 +29,13 @@ public class LambdaSample {
         list.add(8);
         list.forEach(System.out::println);
 
+        MyFunction f2 = LambdaSample::myCal;
+        MyFunction f3 = Math::addExact;
+        System.out.println("乘法:" + f2.cal(2,3) + " \r\n加法:" + f3.cal(2,3));
+    }
+
+    public static int myCal(int i1, int i2){
+        return i1 * i2;
     }
 
     public static interface MyFunction{
